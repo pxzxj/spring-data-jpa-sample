@@ -1,0 +1,30 @@
+###
+GET http://localhost:8080/student/findAll
+
+###
+POST http://localhost:8080/student/delete
+Content-Type: application/x-www-form-urlencoded
+
+id=1
+
+###
+POST http://localhost:8080/student/save
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "age": 20,
+  "gender": "MAN",
+  "families": [
+    {
+      "name": "Jane Doe",
+      "age": 45,
+      "relation": "Mother"
+    },
+    {
+      "name": "Jim Doe",
+      "age": 47,
+      "relation": "Father"
+    }
+  ]
+}
