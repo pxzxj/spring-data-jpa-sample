@@ -1,1 +1,3 @@
 = spring-data-jpa-sample
+
+sample code for https://pxzxj.github.io/articles/why-use-jpa.html[why use jpa]
