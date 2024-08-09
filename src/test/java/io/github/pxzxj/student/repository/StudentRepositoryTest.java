@@ -21,4 +21,10 @@ class StudentRepositoryTest {
         assertEquals(1, students.size());
     }
 
+    @Test
+    void updateAge() {
+        int count = studentRepository.updateAge(1);
+        assertEquals(1, count);
+    }
+
 }
