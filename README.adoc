@@ -40,6 +40,7 @@ JpaSpecificationExecutor   ::   动态条件查询
 * Bidirectional、Unidirectional
 * FetchType
 * CascadeType
+* 不一定非要对象关联，有时直接使用关联的列更简，典型的如操作日志
 
 == CRUD
 
@@ -119,8 +120,3 @@ spring:
 
 * @DataJpaTest
 * schema.sql、data.sql
-
-
-=== 其它
-
-* 不一定非要对象关联，有时直接使用关联的列更简，典型的如操作日志
