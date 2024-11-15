@@ -1,20 +1,30 @@
+POST http://localhost:8080/student/page
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic YWRtaW46MTIzNDU2
+
+name=T&gender=BOY&ageStart=1&nickname=t&dogName=s&page=0&size=10&sort=id,desc
+
 ###
 GET http://localhost:8080/student/findAll
+Authorization: Basic YWRtaW46MTIzNDU2
 
 ###
 POST http://localhost:8080/student/delete
 Content-Type: application/x-www-form-urlencoded
+Authorization: Basic YWRtaW46MTIzNDU2
 
 id=1
 
 ###
 POST http://localhost:8080/student/save
 Content-Type: application/json
+Authorization: Basic YWRtaW46MTIzNDU2
 
 {
   "name": "John Doe",
   "age": 20,
-  "gender": "MAN",
+  "gender": "BOY",
+  "nicknames": ["johnny", "doe"],
   "families": [
     {
       "name": "Jane Doe",
@@ -26,5 +36,29 @@ Content-Type: application/json
       "age": 47,
       "relation": "Father"
     }
+  ],
+  "dogs": [
+    {"name": "small gray"}
   ]
 }
+
+###
+POST http://localhost:8080/student/findDogsSize
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic YWRtaW46MTIzNDU2
+
+id=1
+
+###
+POST http://localhost:8080/student/findDogsSizeInThread
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic YWRtaW46MTIzNDU2
+
+id=1
+
+###
+POST http://localhost:8080/student/findDogsSizeInThreadWithTransaction
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic YWRtaW46MTIzNDU2
+
+id=1

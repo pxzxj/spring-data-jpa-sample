@@ -17,7 +17,7 @@ class StudentRepositoryTest {
 
     @Test
     void findByNameLike() {
-        List<Student> students = studentRepository.findByNameLike("%aa%");
+        List<Student> students = studentRepository.findByNameLike("%T%");
         assertEquals(1, students.size());
     }
 

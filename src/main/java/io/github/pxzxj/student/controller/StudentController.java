@@ -2,6 +2,8 @@ package io.github.pxzxj.student.controller;
 
 import io.github.pxzxj.student.entity.Student;
 import io.github.pxzxj.student.service.StudentService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +16,11 @@ public class StudentController {
 
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
+    }
+
+    @RequestMapping("/page")
+    public Page<Student> page(String name, Student.Gender gender, Integer ageStart, String nickname, String dogName, Pageable pageable) {
+        return studentService.page(name, gender, ageStart, nickname, dogName, pageable);
     }
 
     @RequestMapping("/save")
@@ -29,6 +36,21 @@ public class StudentController {
     @RequestMapping("/delete")
     public void delete(Long id) {
         studentService.delete(id);
+    }
+
+    @RequestMapping("/findDogsSize")
+    public void findDogsSize(Long id) {
+        studentService.findDogsSize(id);
+    }
+
+    @RequestMapping("/findDogsSizeInThread")
+    public void findDogsSizeInThread(Long id) {
+        studentService.findDogsSizeInThread(id);
+    }
+
+    @RequestMapping("/findDogsSizeInThreadWithTransaction")
+    public void findDogsSizeInThreadWithTransaction(Long id) {
+        studentService.findDogsSizeInThreadWithTransaction(id);
     }
 
 }

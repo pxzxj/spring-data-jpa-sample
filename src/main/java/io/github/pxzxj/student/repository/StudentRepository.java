@@ -1,13 +1,14 @@
 package io.github.pxzxj.student.repository;
 
 import io.github.pxzxj.student.entity.Student;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface StudentRepository extends CrudRepository<Student, Long> {
+public interface StudentRepository extends CrudRepository<Student, Long>, JpaSpecificationExecutor<Student> {
 
     List<Student> findByNameLike(String name);
 
