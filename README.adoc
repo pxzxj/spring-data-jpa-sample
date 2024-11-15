@@ -112,11 +112,11 @@ spring:
 === https://docs.spring.io/spring-data/jpa/docs/2.7.x/reference/html/#core.web.basic.paging-and-sorting[Pageable & Spring MVC]
 
 
-=== 事务与懒加载
+=== Lazy Fetch & Transaction
 
 
 
-=== 测试
+=== Test
 
 * @DataJpaTest
 * schema.sql、data.sql
