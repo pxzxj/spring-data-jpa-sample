@@ -116,6 +116,12 @@ spring:
 
 
 
+
+=== Optimistic Locking
+
+* `@Version`
+
+
 === Test
 
 * @DataJpaTest

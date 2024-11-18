@@ -1,4 +1,4 @@
-insert into student(name, age, gender, create_time, creator) values ('Tom', 11, 'BOY', '2024-11-15 00:00:00', 'admin');
+insert into student(name, age, gender, create_time, creator, version) values ('Tom', 11, 'BOY', '2024-11-15 00:00:00', 'admin', 0);
 insert into student_nickname(student_id, nickname) values (1, 'tommy');
 insert into student_nickname(student_id, nickname) values (1, 'sweetie');
 insert into student_nickname(student_id, nickname) values (1, 'cat');

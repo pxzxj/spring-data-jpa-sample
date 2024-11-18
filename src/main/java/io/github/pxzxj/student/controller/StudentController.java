@@ -53,4 +53,14 @@ public class StudentController {
         studentService.findDogsSizeInThreadWithTransaction(id);
     }
 
+    @RequestMapping("/updateAfterSleep")
+    public void updateAfterSleep() throws InterruptedException {
+        studentService.updateAfterSleep();
+    }
+
+    @RequestMapping("/updateImmediately")
+    public void updateImmediately() {
+        studentService.updateImmediately();
+    }
+
 }

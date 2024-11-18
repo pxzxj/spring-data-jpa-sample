@@ -54,6 +54,9 @@ public class Student {
     @LastModifiedBy
     private String modifier;
 
+    @Version
+    private Integer version;
+
     public enum Gender {
 
         BOY, GIRL;

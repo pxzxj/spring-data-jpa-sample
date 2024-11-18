@@ -1,21 +1,22 @@
+###page
 POST http://localhost:8080/student/page
 Content-Type: application/x-www-form-urlencoded
 Authorization: Basic YWRtaW46MTIzNDU2
 
 name=T&gender=BOY&ageStart=1&nickname=t&dogName=s&page=0&size=10&sort=id,desc
 
-###
+###findAll
 GET http://localhost:8080/student/findAll
 Authorization: Basic YWRtaW46MTIzNDU2
 
-###
+###delete
 POST http://localhost:8080/student/delete
 Content-Type: application/x-www-form-urlencoded
 Authorization: Basic YWRtaW46MTIzNDU2
 
 id=1
 
-###
+###save
 POST http://localhost:8080/student/save
 Content-Type: application/json
 Authorization: Basic YWRtaW46MTIzNDU2
@@ -42,23 +43,30 @@ Authorization: Basic YWRtaW46MTIzNDU2
   ]
 }
 
-###
+###findDogsSize
 POST http://localhost:8080/student/findDogsSize
 Content-Type: application/x-www-form-urlencoded
 Authorization: Basic YWRtaW46MTIzNDU2
 
 id=1
 
-###
+###findDogsSizeInThread
 POST http://localhost:8080/student/findDogsSizeInThread
 Content-Type: application/x-www-form-urlencoded
 Authorization: Basic YWRtaW46MTIzNDU2
 
 id=1
 
-###
+###findDogsSizeInThreadWithTransaction
 POST http://localhost:8080/student/findDogsSizeInThreadWithTransaction
 Content-Type: application/x-www-form-urlencoded
 Authorization: Basic YWRtaW46MTIzNDU2
 
 id=1
+
+###updateAfterSleep
+GET http://localhost:8080/student/updateAfterSleep
+
+
+###updateImmediately
+GET http://localhost:8080/student/updateImmediately

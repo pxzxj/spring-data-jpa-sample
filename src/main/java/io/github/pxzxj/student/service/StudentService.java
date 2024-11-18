@@ -19,6 +19,7 @@ import javax.persistence.criteria.Subquery;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 @Service
 public class StudentService {
@@ -106,6 +107,20 @@ public class StudentService {
             Set<Dog> dogs = student.getDogs();
             System.out.println("findDogsSizeInThread: " + dogs.size());
         })).start();
+    }
+
+
+    public void updateAfterSleep() throws InterruptedException {
+        Student student = studentRepository.findById(1L).get();
+        student.setAge(student.getAge() + 1);
+        TimeUnit.SECONDS.sleep(10);
+        studentRepository.save(student);
+    }
+
+    public void updateImmediately() {
+        Student student = studentRepository.findById(1L).get();
+        student.setAge(student.getAge() + 1);
+        studentRepository.save(student);
     }
 
 }

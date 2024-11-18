@@ -6,7 +6,8 @@ create table student(
     create_time datetime,
     creator varchar(200),
     modify_time datetime,
-    modifier varchar(200)
+    modifier varchar(200),
+    version integer
 );
 
 create table student_nickname(
