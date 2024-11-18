@@ -66,7 +66,9 @@ id=1
 
 ###updateAfterSleep
 GET http://localhost:8080/student/updateAfterSleep
+Authorization: Basic YWRtaW46MTIzNDU2
 
 
 ###updateImmediately
 GET http://localhost:8080/student/updateImmediately
+Authorization: Basic YWRtaW46MTIzNDU2
