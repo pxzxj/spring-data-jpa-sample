@@ -22,6 +22,7 @@ image::spring-data-jpa-sample.png[]
 * Boolean
 * LocalDateTime
 * @Enumerated
+* @Transient
 * @ElementCollection
 * @CreatedBy、@CreatedDate、@LastModifiedBy、@LastModifiedDate
 
